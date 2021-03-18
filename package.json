@@ -4,8 +4,8 @@
   "description": "mongoosetest",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js --dev",
-    "prod": "node app.js --prod"
+    "start": "node app.js --dev",
+    "prod": "nodemon app.js --prod"
   },
   "author": "",
   "license": "ISC",
