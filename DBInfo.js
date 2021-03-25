@@ -2,13 +2,14 @@
 //  /DBBOX = URL
 const GetDBInfo = (app,database) => {
     app.get('/DBBOX',(req,res) => {
-        console.log(req.query.username)
+        //console.log(req.query.username)
         database.getUserData(req.query.username, (err,data) => {
-            let getJSONobj = {
+            console.log("data" + data);
+           /* let getJSONobj = {
                 username: data[0].username,
                 password: data[0].password
             }
-            res.send(JSON.stringify(getJSONobj))
+            res.send(JSON.stringify(getJSONobj))*/
         }).catch(err => {
             console.log(err);
         })
