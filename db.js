@@ -5,6 +5,8 @@ const schemas = require('./Schema/FluffyKitten')
 const connectToMYDB = () => {
     mongoose.connect(process.env.MYDB, {useNewUrlParser: true, useUnifiedTopology: true}).then((res) => {
 
+        console.log('connected to db!');
+        console.log(res);
         /*
         const fluffyKittensModel = mongoose.model('DBBOX',schemas.fluffyKittenSchema); //tell mongoose what the schema is (collection name , then what the schema is)
         fluffyKittensModel.insertMany({ name: 'testKitten', age: 21, owner: 'pepega'}).then(res => {
